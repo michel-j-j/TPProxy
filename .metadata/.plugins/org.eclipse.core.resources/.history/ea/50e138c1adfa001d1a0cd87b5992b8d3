@@ -1,0 +1,9 @@
+package portsout;
+
+public class ErrorException extends RuntimeException{
+
+	public ErrorException(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

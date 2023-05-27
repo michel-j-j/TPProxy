@@ -1,0 +1,54 @@
+package model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class JDBC {
+
+	private Connection obtenerConexion() {
+		Conn conn = new Conn("jdbc:mysql://localhost:3308/poo2");
+		return conn.open();
+	}
+
+	public List<Map<String, String>> recuperarPersonas(String sql) {
+		try (Connection conn = obtenerConexion(); PreparedStatement statement = conn.prepareStatement(sql);) {
+			ResultSet result = statement.executeQuery();
+			Map<String, String> mapa = new HashMap<String, String>();
+			List<Map<String, String>> listaPersonas = new ArrayList<Map<String, String>>();
+			String nombrePersona = null;
+			String id = null;
+
+			while (result.next()) {
+				nombrePersona = result.getString(1);
+				id = result.getString(2);
+				mapa.put(id, nombrePersona);
+				listaPersonas.add(mapa);
+			}
+			return listaPersonas;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public Set<String> telefonosDePersona(int id) {
+		try (Connection conn = obtenerConexion(); PreparedStatement statement = conn.prepareStatement(sql);) {
+			statement.setInt(1, id);
+			ResultSet result = statement.executeQuery();
+			Set<String> telefonos = new HashSet<String>();
+			while (result.next()) {
+				telefonos.add(result.getString(2));
+			}
+			return telefonos;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+}

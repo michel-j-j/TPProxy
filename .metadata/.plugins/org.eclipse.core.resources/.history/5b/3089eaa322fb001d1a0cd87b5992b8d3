@@ -1,0 +1,7 @@
+package model;
+
+public class Fachada {
+	private Conn conn;
+	// private
+
+}

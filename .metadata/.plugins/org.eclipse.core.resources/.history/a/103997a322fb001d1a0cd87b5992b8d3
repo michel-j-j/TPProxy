@@ -1,0 +1,12 @@
+package main;
+
+public class Main {
+	public static void main(String args[]) {
+//		PersonaJDBC dao = new PersonaJDBC();
+//		PersonaInterface p = dao.personaPorId(1);
+//		System.out.println(p.nombre());
+//		for (Telefono telefono : p.telefonos()) {
+//			System.out.println(telefono);
+//		}
+	}
+}

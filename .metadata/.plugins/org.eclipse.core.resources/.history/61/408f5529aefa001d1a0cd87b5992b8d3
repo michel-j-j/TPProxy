@@ -1,0 +1,6 @@
+package portsout;
+
+public interface PersonaDAO {
+	public void almacenarPersona(String nombre);
+	public PersonaRecord recuperarPersona(String id);
+}

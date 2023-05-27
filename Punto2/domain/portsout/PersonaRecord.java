@@ -1,0 +1,4 @@
+package portsout;
+
+public record PersonaRecord(String id, String nombre) {
+}

@@ -1,0 +1,9 @@
+INDEX VERSION 1.131+C:\Users\michi\OneDrive\Escritorio\Universidad\POO2\TPProxy\.metadata\.plugins\org.eclipse.jdt.core
+2841030131.index
+4236005171.index
+2288432537.index
+2433838391.index
+2132741147.index
+3860225441.index
+496110554.index
+1865797976.index

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.google.gson.GsonBuilder"/>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="portsout.PersonaDAO"/>
+    <fullyQualifiedTypeName name="portsout.PersonaRecord"/>
+    <fullyQualifiedTypeName name="data.PersonaJDBC"/>
+    <fullyQualifiedTypeName name="model.PersonaInterface"/>
+    <fullyQualifiedTypeName name="model.ProxyPersona"/>
+    <fullyQualifiedTypeName name="java.util.Objects"/>
+</qualifiedTypeNameHistroy>
