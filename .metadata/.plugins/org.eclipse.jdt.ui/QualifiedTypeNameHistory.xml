@@ -10,4 +10,6 @@
     <fullyQualifiedTypeName name="model.PersonaInterface"/>
     <fullyQualifiedTypeName name="model.ProxyPersona"/>
     <fullyQualifiedTypeName name="java.util.Objects"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

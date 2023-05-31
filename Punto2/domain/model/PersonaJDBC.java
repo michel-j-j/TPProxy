@@ -14,7 +14,7 @@ public class PersonaJDBC {
 		return conn.open();
 	}
 
-	public ProxyPersona personaPorId(int id) {
+	public Persona personaPorId(int id) {
 		String sql = "SELECT nombre " + "FROM personas " + "WHERE id = ?";
 		try (Connection conn = obtenerConexion(); PreparedStatement statement = conn.prepareStatement(sql);) {
 			statement.setInt(1, id);
@@ -24,7 +24,8 @@ public class PersonaJDBC {
 			if (result.next()) {
 				nombrePersona = result.getString(1);
 			}
-			return new ProxyPersona(id, nombrePersona, null, this);
+			Proxy proxy = new Proxy(this, id);
+			return new Persona(id, nombrePersona, proxy);
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}

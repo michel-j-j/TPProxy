@@ -1,17 +1,18 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 public class Proxy implements Set {
 	private PersonaJDBC jdbc;
-	private Persona persona;
+	private Integer id;
 
-	public Proxy(PersonaJDBC jdbc, Persona persona) {
+	public Proxy(PersonaJDBC jdbc, Integer id) {
 		this.jdbc = jdbc;
-		this.persona = persona;
+		this.id = Objects.requireNonNull(id);
 	}
 
 	@Override
@@ -45,9 +46,10 @@ public class Proxy implements Set {
 
 	@Override
 	public Object[] toArray(Object[] a) {
+		Set<Telefono> telefonosSet = jdbc.telefonosDePersona(id);
+		Telefono[] telefonosArray = telefonosSet.toArray(new Telefono[0]);
 
-		List<Telefono> list = jdbc.telefonosDePersona();
-		return null;
+		return telefonosArray;
 	}
 
 	@Override
